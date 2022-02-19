@@ -16,12 +16,12 @@ public class L1_NGR
 
 	public static List<Integer> nextGreatestRight(int[] arr)
 	{
-		int n = arr.length;
+		int n = arr.length; 
 		Stack<Integer> st = new Stack<Integer>();
 		List<Integer> ans = new ArrayList<>();
 
 
-		for(int i = n-1; i>=0; i++)
+		for(int i = n-1; i>=0; i--)
 		{
 			if(st.empty())
 				ans.add(-1);
@@ -31,7 +31,7 @@ public class L1_NGR
 				ans.add(st.peek());
 			}
 
-			else if(!st.empty() && st.peek()<arr[i])
+			else if(!st.empty() &&  st.peek()<arr[i])
 			{
 				while(!st.empty()  && st.peek() <= arr[i])
 				{
