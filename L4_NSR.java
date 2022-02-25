@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class L4_NSR
 {
@@ -23,12 +23,12 @@ public class L4_NSR
 				ans.add(-1);
 
 
-			else if(!st.isEmtpy()  && st.peek > arr[i])
+			else if(!st.isEmpty() && st.peek() > arr[i])
 				ans.add(st.peek());
 
-			else if(!st.isEmpty() && st.peek <= arr[i])
+			else if(!st.isEmpty() && st.peek() <= arr[i])
 			{
-				while(!st.isEmpty()  && st.peek <= arr[i])
+				while(!st.isEmpty()  && st.peek() <= arr[i])
 					st.pop();
 				if(st.isEmpty())
 					ans.add(-1);
